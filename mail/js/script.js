@@ -13,27 +13,27 @@ const userMail = prompt("Dimmi la tua email");
 // pluto@gmail.com
 
 // // Controllare con il for se l'email è nell'array
-// let emailFound = false;
-// for (let i = 0; i < emails.length; i++) {
-//     const thisEmail = emails[i];
-// 
-//     if (thisEmail === userMail) {
-//        emailFound = true;
-//     }
-// }
-// console.log(emailFound);
-// 
-// // Stampare il rusltato a secondo del esito
-// if (emailFound) {
-//     console.log("Email trovata, puoi accedere");
-// } else {
-//     console.log("Accesso negato");
-// }
+let emailFound = false;
+for (let i = 0; i < emails.length; i++) {
+    const thisEmail = emails[i];
 
-const emailFound = emails.includes(userMail);
+    if (thisEmail === userMail) {
+       emailFound = true;
+    }
+}
+console.log(emailFound);
 
+// Stampare il rusltato a secondo del esito
 if (emailFound) {
     console.log("Email trovata, puoi accedere");
 } else {
     console.log("Accesso negato");
 }
+// Versione con Array.prototipe.includes
+// const emailFound = emails.includes(userMail);
+// 
+// if (emailFound) {
+//     console.log("Email trovata, puoi accedere");
+// } else {
+//     console.log("Accesso negato");
+// }
